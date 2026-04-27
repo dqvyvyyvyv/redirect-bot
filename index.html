@@ -1,0 +1,1103 @@
+<!--
+  Produto: Universo de Livros
+  Proprietário: [SUBSTITUIR: SEU-DOMINIO.com.br]
+  Data: 2026-04-27
+  ID: BIBL-20260427
+  Uso comercial restrito ao proprietário.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universo de Livros — 30.000+ Livros por R$10</title>
+  <meta name="description" content="30.000+ livros e audiobooks por apenas R$10. Acesso vitalício, sem mensalidade, entregue no seu e-mail em minutos.">
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="30.000+ Livros e Audiobooks por Apenas R$10 — Acesso Vitalício">
+  <meta property="og:description" content="Tudo que você precisa para evoluir na carreira, finanças e vida. Sem mensalidade. Para sempre. Por menos de um café.">
+  <meta property="og:image" content="<!-- SUBSTITUIR: URL da imagem OG 1200x630px -->">
+  <meta property="og:url" content="<!-- SUBSTITUIR: URL da página -->">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="30.000+ Livros e Audiobooks por Apenas R$10">
+  <meta name="twitter:description" content="Acesso vitalício. Sem mensalidade. Para sempre.">
+  <meta name="twitter:image" content="<!-- SUBSTITUIR: URL da imagem OG 1200x630px -->">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== VARIÁVEIS ===== */
+    :root {
+      --bg:          #07111e;
+      --surface:     #0d1b2a;
+      --surface2:    #122236;
+      --border:      #1c3350;
+      --text:        #e8edf2;
+      --muted:       #6b8eaa;
+      --accent:      #c9a84c;
+      --accent-dim:  rgba(201,168,76,0.15);
+      --accent-ring: rgba(201,168,76,0.35);
+      --cta:         #c9a84c;
+      --cta-hover:   #dfc070;
+      --cta-text:    #07111e;
+      --green:       #22c55e;
+      --red:         #ef4444;
+      --white:       #ffffff;
+      --font-title:  'Playfair Display', Georgia, serif;
+      --font-body:   'Lato', system-ui, sans-serif;
+      --radius:      10px;
+      --radius-lg:   18px;
+      --ease:        0.2s ease;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--accent); text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ===== LAYOUT ===== */
+    .container      { width: 100%; max-width: 700px;  margin: 0 auto; padding: 0 20px; }
+    .container-wide { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+    /* ===== TIPOGRAFIA ===== */
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+    .text-center { text-align: center; }
+    .text-gold   { color: var(--accent); }
+    .text-green  { color: var(--green); }
+
+    /* ===== BOTÃO CTA ===== */
+    .btn-cta {
+      display: inline-block;
+      background: var(--cta);
+      color: var(--cta-text);
+      font-family: var(--font-body);
+      font-weight: 900;
+      font-size: 18px;
+      min-height: 56px;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.2;
+      transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+    }
+    .btn-cta:hover {
+      background: var(--cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--accent-ring);
+    }
+    .btn-cta:active { transform: translateY(0); }
+    .btn-cta.full { width: 100%; text-align: center; }
+
+    /* ===== URGÊNCIA TOP ===== */
+    .urgency-bar {
+      background: var(--accent);
+      color: var(--cta-text);
+      text-align: center;
+      padding: 10px 16px;
+      font-family: var(--font-body);
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(175deg, #0d1b2a 0%, #07111e 100%);
+      padding: 56px 0 52px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-ring);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      animation: fadeUp 0.5s ease both;
+    }
+    .hero h1 {
+      font-family: var(--font-title);
+      font-size: clamp(2.1rem, 6.5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.13;
+      color: var(--white);
+      margin-bottom: 18px;
+      animation: fadeUp 0.5s ease 0.1s both;
+    }
+    .hero h1 .gold {
+      color: var(--accent);
+      display: block;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.75;
+      animation: fadeUp 0.5s ease 0.2s both;
+    }
+    .hero-cta-block {
+      animation: fadeUp 0.5s ease 0.3s both;
+    }
+    .hero-disclaimer {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .hero-pills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 28px auto 0;
+      max-width: 540px;
+      animation: fadeUp 0.5s ease 0.4s both;
+    }
+    .pill {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .pill::before { content: "✓ "; color: var(--green); font-weight: 900; }
+
+    /* ===== SOCIAL BAR ===== */
+    .social-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .social-bar-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .social-number {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+    }
+    .social-label {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    /* ===== SEÇÕES ===== */
+    .section     { padding: 64px 0; }
+    .section-alt { background: var(--surface); }
+
+    /* ===== DORES ===== */
+    .pain-grid { display: grid; gap: 14px; }
+    .pain-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--red);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    .pain-card strong { color: var(--white); }
+
+    /* ===== PASSOS ===== */
+    .steps { display: grid; gap: 20px; }
+    .step {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-ring);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .step h3 {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .step p { font-size: 14px; color: var(--muted); }
+
+    /* ===== CATEGORIAS ===== */
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .cat-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 14px;
+      text-align: center;
+      transition: border-color var(--ease), transform var(--ease);
+    }
+    .cat-card:hover {
+      border-color: var(--accent-ring);
+      transform: translateY(-2px);
+    }
+    .cat-icon  { font-size: 2rem; display: block; margin-bottom: 8px; }
+    .cat-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    /* ===== AUDIOBOOKS BOX ===== */
+    .audio-box {
+      background: linear-gradient(135deg, var(--accent-dim), transparent 80%);
+      border: 1px solid var(--accent-ring);
+      border-radius: var(--radius-lg);
+      padding: 28px 22px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .audio-box .big-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    .audio-box h3 {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .audio-box p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    /* ===== DEPOIMENTOS ===== */
+    .testi-grid { display: grid; gap: 14px; }
+    .testi {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .testi-text {
+      font-size: 15px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .testi-text::before {
+      content: "\201C";
+      color: var(--accent);
+      font-family: var(--font-title);
+      font-size: 2.2rem;
+      line-height: 0;
+      vertical-align: -0.5em;
+      margin-right: 3px;
+    }
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .author-name  { font-size: 14px; font-weight: 700; color: var(--white); }
+    .author-place { font-size: 12px; color: var(--muted); }
+    .stars        { color: #fbbf24; font-size: 13px; letter-spacing: 2px; }
+
+    /* ===== COUNTDOWN ===== */
+    .countdown-wrap {
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .countdown-label {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .cd-timer {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .cd-block {
+      text-align: center;
+    }
+    .cd-block span {
+      display: block;
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--white);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 14px;
+      min-width: 58px;
+      line-height: 1;
+    }
+    .cd-block small {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-top: 5px;
+      display: block;
+    }
+    .cd-sep {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--red);
+      line-height: 1;
+      margin-top: 8px;
+    }
+
+    /* ===== OFERTA ===== */
+    .offer-box {
+      background: var(--surface);
+      border: 1px solid var(--accent-ring);
+      border-radius: var(--radius-lg);
+      padding: 32px 22px;
+      text-align: center;
+    }
+    .offer-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: 4px;
+      margin-bottom: 22px;
+    }
+    .price-from {
+      font-size: 17px;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+    .price-main {
+      font-family: var(--font-title);
+      font-size: clamp(3.5rem, 12vw, 5rem);
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin: 4px 0;
+    }
+    .price-cents {
+      font-size: 2rem;
+      vertical-align: 0.4em;
+      margin-left: 2px;
+    }
+    .price-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .includes {
+      text-align: left;
+      display: grid;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .includes li {
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .includes li::before {
+      content: "✓";
+      color: var(--green);
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .payment-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .pay-chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .ssl-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* ===== GARANTIA ===== */
+    .guarantee-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 22px;
+      text-align: center;
+    }
+    .guarantee-icon { font-size: 3.5rem; display: block; margin-bottom: 16px; }
+    .guarantee-box h3 {
+      font-family: var(--font-title);
+      font-size: 1.5rem;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .guarantee-box p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-list { display: grid; gap: 10px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+    .faq-q {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .faq-a { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+    /* ===== CTA FINAL ===== */
+    .final-cta {
+      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+      border-top: 1px solid var(--border);
+      padding: 68px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-family: var(--font-title);
+      font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .final-cta p { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+    .final-trust {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      text-align: center;
+    }
+    footer p { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+    footer a { color: var(--muted); font-size: 12px; text-decoration: underline; }
+
+    /* ===== CTA FIXO MOBILE ===== */
+    @media (max-width: 768px) {
+      .cta-sticky {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-top: 1px solid var(--border);
+        padding: 10px 16px;
+        z-index: 100;
+      }
+      .cta-sticky .btn-cta { width: 100%; text-align: center; font-size: 16px; padding: 14px 20px; }
+      body { padding-bottom: 82px; }
+    }
+    @media (min-width: 769px) { .cta-sticky { display: none; } }
+
+    /* ===== POPUP SOCIAL PROOF ===== */
+    .proof-popup {
+      position: fixed;
+      bottom: 96px;
+      left: 16px;
+      max-width: 280px;
+      background: var(--surface);
+      border: 1px solid var(--accent-ring);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 200;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      transform: translateX(-120%);
+      transition: transform 0.4s cubic-bezier(.34,1.3,.64,1);
+    }
+    .proof-popup.show { transform: translateX(0); }
+    .proof-book { font-size: 1.6rem; flex-shrink: 0; }
+    .proof-body { font-size: 13px; color: var(--text); line-height: 1.45; }
+    .proof-body strong { color: var(--accent); }
+    .proof-time { font-size: 11px; color: var(--muted); display: block; margin-top: 2px; }
+
+    @media (min-width: 769px) { .proof-popup { bottom: 32px; } }
+
+    /* ===== ANIMAÇÕES ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== DESKTOP ===== */
+    @media (min-width: 768px) {
+      .pain-grid  { grid-template-columns: 1fr 1fr; }
+      .cat-grid   { grid-template-columns: repeat(4, 1fr); }
+      .testi-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PROTEÇÃO DE DOMÍNIO -->
+<script>
+  (function() {
+    var auth = ['SEU-DOMINIO.com.br', 'www.SEU-DOMINIO.com.br', 'localhost', '127.0.0.1'];
+    if (!auth.includes(window.location.hostname)) {
+      document.documentElement.innerHTML = '';
+      window.location.replace('https://SEU-DOMINIO.com.br');
+    }
+  })();
+</script>
+
+<!-- BANNER DE URGÊNCIA -->
+<div class="urgency-bar">
+  🔥 Oferta por Tempo Limitado — Preço pode subir a qualquer momento
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">📚 Acesso Vitalício &nbsp;·&nbsp; Sem Mensalidade</div>
+
+    <h1>
+      30.000+ Livros e Audiobooks
+      <span class="gold">por Apenas R$ 10</span>
+    </h1>
+
+    <p class="hero-sub">
+      Tudo que você precisa para evoluir na carreira, nas finanças e na vida —
+      em um único acesso, para sempre, sem mensalidade, por menos do que um café.
+    </p>
+
+    <div class="hero-cta-block">
+      <a href="<!-- SUBSTITUIR: link do checkout Wiapy -->"
+         class="btn-cta"
+         aria-label="Acessar o Universo de Livros por R$10 agora">
+        QUERO MINHA BIBLIOTECA AGORA →
+      </a>
+      <p class="hero-disclaimer">
+        ✓ Acesso imediato &nbsp;|&nbsp; ✓ Entregue no e-mail &nbsp;|&nbsp; ✓ Garantia de 30 dias
+      </p>
+    </div>
+
+    <div class="hero-pills">
+      <span class="pill">Acesso imediato</span>
+      <span class="pill">Vitalício — paga 1x</span>
+      <span class="pill">Celular, tablet ou PC</span>
+      <span class="pill">+30k livros + audiobooks</span>
+    </div>
+  </div>
+</section>
+
+<!-- BARRA DE PROVA SOCIAL -->
+<div class="social-bar">
+  <div class="social-bar-inner">
+    <span class="social-number">+5.000</span>
+    <span class="social-label">pessoas já acessando a biblioteca hoje</span>
+  </div>
+</div>
+
+<!-- ==================== PROBLEMA ==================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">Você reconhece alguma dessas situações?</h2>
+    <p class="section-sub text-center" style="margin: 0 auto 36px; max-width: 520px;">
+      A vontade de aprender existe. O que atrapalha é o custo.
+    </p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <strong>Livros bons custam R$ 40, R$ 60, às vezes mais.</strong>
+        Você quer ler, quer evoluir, mas não faz sentido gastar esse valor toda vez
+        que encontra um título interessante.
+      </div>
+      <div class="pain-card">
+        <strong>Assinaturas mensais são um custo que nunca para.</strong>
+        Pagou, cancelou, esqueceu — e no final do ano gastou mais de R$ 200
+        sem ter lido nem 10 livros.
+      </div>
+      <div class="pain-card">
+        <strong>Baixar de sites piratas é arriscado e trabalhoso.</strong>
+        Vírus, arquivos corrompidos, formatos errados.
+        Tempo gasto vs. resultado zero.
+      </div>
+      <div class="pain-card">
+        <strong>Colegas falam de livros que você nunca leu.</strong>
+        Finanças, negócios, auto-desenvolvimento — a sensação de estar ficando
+        para trás não some, só aumenta.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOLUÇÃO ==================== -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title text-center">A solução mais simples que existe</h2>
+    <p class="section-sub text-center" style="margin: 0 auto 36px; max-width: 480px;">
+      Um único pagamento. Uma biblioteca completa. Para o resto da vida.
+    </p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Você compra com segurança</h3>
+          <p>Pix, cartão ou boleto. Em menos de 5 minutos a compra está confirmada.
+             Sem cadastro complicado, sem assinatura.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>Recebe tudo no e-mail</h3>
+          <p>O link de acesso chega imediatamente após a confirmação.
+             30.000+ livros e audiobooks organizados por pasta, prontos para usar.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>Lê quando e onde quiser</h3>
+          <p>Celular, tablet ou computador — qualquer dispositivo, a qualquer hora,
+             sem depender de internet depois de baixar. Para sempre.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== O QUE INCLUI ==================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center">O que está na sua biblioteca</h2>
+    <p class="section-sub text-center" style="margin: 0 auto 36px; max-width: 500px;">
+      Mais de 30.000 títulos organizados por categoria, prontos para acessar agora.
+    </p>
+
+    <div class="cat-grid">
+      <div class="cat-card">
+        <span class="cat-icon">💰</span>
+        <span class="cat-label">Finanças e Investimentos</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🚀</span>
+        <span class="cat-label">Negócios e Empreendedorismo</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🧠</span>
+        <span class="cat-label">Autoajuda e Motivação</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">📈</span>
+        <span class="cat-label">Vendas e Persuasão</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🌟</span>
+        <span class="cat-label">Biografias de Sucesso</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">📊</span>
+        <span class="cat-label">Marketing Digital</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🕊️</span>
+        <span class="cat-label">Espiritualidade e Psicologia</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">📚</span>
+        <span class="cat-label">Clássicos e E-books Raros</span>
+      </div>
+    </div>
+
+    <div class="audio-box">
+      <span class="big-icon">🎧</span>
+      <h3>+ Centenas de Audiobooks Selecionados</h3>
+      <p>
+        Evolua enquanto dirige, caminha ou treina. Títulos de auto-desenvolvimento,
+        finanças e negócios — prontos para ouvir no celular.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DEPOIMENTOS ==================== -->
+<section class="section section-alt">
+  <div class="container-wide">
+    <h2 class="section-title text-center">O que dizem quem já acessou</h2>
+    <p class="section-sub text-center" style="margin: 0 auto 36px; max-width: 480px;">
+      Mais de 5.000 pessoas já usam a biblioteca todos os dias.
+    </p>
+    <div class="testi-grid">
+      <div class="testi">
+        <p class="testi-text">
+          Comprei achando que era bom demais pra ser verdade… quando recebi os
+          arquivos fiquei chocado com a quantidade e a qualidade do que estava lá.
+        </p>
+        <div class="testi-author">
+          <div class="avatar">👤</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Lucas M.</div>
+            <div class="author-place">São Paulo, SP</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <p class="testi-text">
+          Sou fã de desenvolvimento pessoal e negócios. Tem clássicos e livros
+          raros que eu nem sabia que existiam. Em um único lugar.
+        </p>
+        <div class="testi-author">
+          <div class="avatar">👤</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Camila R.</div>
+            <div class="author-place">Belo Horizonte, MG</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi">
+        <p class="testi-text">
+          Melhor compra que fiz esse mês. Muito conteúdo por um valor muito baixo.
+          Leio no celular em qualquer lugar — sem pagar mensalidade.
+        </p>
+        <div class="testi-author">
+          <div class="avatar">👤</div>
+          <div>
+            <div class="stars">★★★★★</div>
+            <div class="author-name">Fernanda L.</div>
+            <div class="author-place">Curitiba, PR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== OFERTA ==================== -->
+<section class="section" id="oferta">
+  <div class="container">
+    <div class="offer-box">
+      <div class="offer-tag">🔥 Oferta por Tempo Limitado</div>
+
+      <!-- CONTADOR -->
+      <div class="countdown-wrap">
+        <p class="countdown-label">⏱️ Essa condição expira em:</p>
+        <div class="cd-timer">
+          <div class="cd-block">
+            <span id="cd-h">03</span>
+            <small>horas</small>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span id="cd-m">47</span>
+            <small>minutos</small>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-block">
+            <span id="cd-s">00</span>
+            <small>segundos</small>
+          </div>
+        </div>
+      </div>
+
+      <p class="price-from">De R$ 197,00</p>
+      <div class="price-main">
+        R$ 10<span class="price-cents">,00</span>
+      </div>
+      <p class="price-note">pagamento único · acesso vitalício</p>
+
+      <ul class="includes">
+        <li>30.000+ e-books em PDF organizados por categoria</li>
+        <li>Centenas de audiobooks selecionados</li>
+        <li>Acesso imediato após o pagamento</li>
+        <li>Compatível com celular, tablet e computador</li>
+        <li>Conteúdo organizado em pastas — fácil de navegar</li>
+        <li>E-books raros e difíceis de encontrar em outro lugar</li>
+        <li>Acesso vitalício — paga uma vez, tem para sempre</li>
+      </ul>
+
+      <a href="<!-- SUBSTITUIR: link do checkout Wiapy -->"
+         class="btn-cta full"
+         aria-label="Comprar Universo de Livros por R$10 agora">
+        COMPRAR E RECEBER AGORA — R$ 10,00 →
+      </a>
+
+      <div class="payment-row">
+        <span class="pay-chip">⚡ Pix</span>
+        <span class="pay-chip">💳 Cartão</span>
+        <span class="pay-chip">📋 Boleto</span>
+      </div>
+      <p class="ssl-note">🔒 Pagamento 100% seguro · Protegido por criptografia SSL</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== GARANTIA ==================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="guarantee-box">
+      <span class="guarantee-icon">🛡️</span>
+      <h3>Garantia Total de 30 Dias</h3>
+      <p>
+        Se por qualquer motivo você não ficar satisfeito com a biblioteca,
+        basta enviar um e-mail em até 30 dias e devolvemos 100% do seu dinheiro.
+        Sem burocracia, sem perguntas, sem letras miúdas.
+        <br><br>
+        <strong style="color:var(--white);">O risco é zero. A decisão é sua.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title text-center" style="margin-bottom: 32px;">Perguntas frequentes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Como recebo o acesso?</p>
+        <p class="faq-a">Por e-mail, imediatamente após a confirmação do pagamento.
+          Você receberá um link com todos os arquivos organizados em pastas.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Funciona no celular?</p>
+        <p class="faq-a">Sim, 100% compatível com celular, tablet e computador.
+          Qualquer dispositivo com leitor de PDF ou tocador de MP3 funciona.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">O acesso é mesmo vitalício?</p>
+        <p class="faq-a">Sim. Você paga uma única vez e acessa para sempre.
+          Sem mensalidade, sem renovação, sem surpresas.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Em quanto tempo recebo?</p>
+        <p class="faq-a">O acesso é enviado imediatamente após a confirmação do pagamento.
+          No Pix, chega em menos de 5 minutos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA FINAL ==================== -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Pronto para ter 30.000+ livros no seu celular?</h2>
+    <p>Acesso imediato · Sem mensalidade · Garantia de 30 dias</p>
+    <a href="<!-- SUBSTITUIR: link do checkout Wiapy -->"
+       class="btn-cta"
+       aria-label="Acessar o Universo de Livros agora">
+      SIM, QUERO MINHA BIBLIOTECA AGORA →
+    </a>
+    <p class="final-trust">
+      🔒 Compra 100% segura &nbsp;·&nbsp; 🔥 Oferta por tempo limitado
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>© 2026 Universo de Livros. Todos os direitos reservados.</p>
+    <p>
+      <!-- SUBSTITUIR: adicionar links reais -->
+      <a href="#">Política de Privacidade</a>
+      &nbsp;·&nbsp;
+      <a href="#">Termos de Uso</a>
+    </p>
+  </div>
+</footer>
+
+<!-- CTA FIXO MOBILE -->
+<div class="cta-sticky">
+  <a href="<!-- SUBSTITUIR: link do checkout Wiapy -->"
+     class="btn-cta"
+     aria-label="Comprar agora por R$10">
+    COMPRAR AGORA — R$ 10,00 →
+  </a>
+</div>
+
+<!-- POPUP SOCIAL PROOF -->
+<div class="proof-popup" id="proofPopup" role="status" aria-live="polite">
+  <span class="proof-book">📚</span>
+  <div class="proof-body">
+    <strong id="popupName">Roberto</strong> de <span id="popupCity">Manaus</span>
+    recebeu acesso imediato
+    <small class="proof-time" id="popupTime">há 2 minutos</small>
+  </div>
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+  /* COUNTDOWN — persiste na sessão */
+  (function () {
+    var KEY = 'bibl_cd_end';
+    var stored = sessionStorage.getItem(KEY);
+    var end = stored
+      ? parseInt(stored, 10)
+      : Date.now() + (3 * 3600 + 47 * 60) * 1000;
+    if (!stored) sessionStorage.setItem(KEY, end);
+
+    var elH = document.getElementById('cd-h');
+    var elM = document.getElementById('cd-m');
+    var elS = document.getElementById('cd-s');
+
+    function tick() {
+      var diff = end - Date.now();
+      if (diff <= 0) {
+        elH.textContent = '00';
+        elM.textContent = '00';
+        elS.textContent = '00';
+        return;
+      }
+      elH.textContent = String(Math.floor(diff / 3600000)).padStart(2, '0');
+      elM.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+      elS.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
+
+  /* SOCIAL PROOF POPUP */
+  (function () {
+    var names  = ['Lucas', 'Camila', 'Pedro', 'Fernanda', 'Rafael', 'Mariana',
+                  'Carlos', 'Juliana', 'Diego', 'Ana', 'Bruno', 'Larissa'];
+    var cities = ['São Paulo', 'Belo Horizonte', 'Curitiba', 'Fortaleza', 'Manaus',
+                  'Salvador', 'Recife', 'Porto Alegre', 'Goiânia', 'Brasília',
+                  'Natal', 'Belém'];
+    var times  = ['agora mesmo', 'há 1 minuto', 'há 2 minutos', 'há 3 minutos', 'há 5 minutos'];
+
+    var popup = document.getElementById('proofPopup');
+    var pName = document.getElementById('popupName');
+    var pCity = document.getElementById('popupCity');
+    var pTime = document.getElementById('popupTime');
+
+    function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function show() {
+      pName.textContent = rand(names);
+      pCity.textContent = rand(cities);
+      pTime.textContent = rand(times);
+      popup.classList.add('show');
+      setTimeout(function () { popup.classList.remove('show'); }, 4500);
+    }
+
+    setTimeout(function () {
+      show();
+      setInterval(show, 20000);
+    }, 6000);
+  })();
+</script>
+
+<!-- BLOQUEIO DE INSPEÇÃO -->
+<script>
+  document.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  document.addEventListener('keydown', function (e) {
+    if (
+      e.key === 'F12' ||
+      (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+      (e.ctrlKey && e.key === 'U')
+    ) {
+      e.preventDefault();
+      return false;
+    }
+  });
+</script>
+
+</body>
+</html>
